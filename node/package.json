@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "nodemon mysqlconnect.js"
+    "serve": "nodemon event-and-emitter.js"
   },
   "keywords": [],
   "author": "",
