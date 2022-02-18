@@ -1,11 +1,11 @@
-var nodeMailer = require("nodemailer");
+  var nodeMailer = require("nodemailer");
 var transport = nodeMailer.createTransport({
   host: "smtp.gmail.com",
   port: 587,
   secure: false,
   requireTLS: true,
   auth: {
-    user: "kathiriyaparth283@gmail.com",
+    user: "kathiriyaparth283@gmail.com", 
     pass: "parth@2002",
   },
 });
