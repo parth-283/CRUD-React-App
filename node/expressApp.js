@@ -1,20 +1,16 @@
-const express = require('express')
+const express = require("express");
 const app = express();
+const router = express.Router();
+const urlcheck = require("./middleware");
 
-const checkurl = function(req,res,next)
-{
-    console.warn("current route is",req.originalUrl);
-    next();
-}
-app.use(checkurl);
-
-app.get('/',function(req,res){
-    res.send("hello express")
+app.get("/", function (req, res) {
+  res.send("hello express");
 });
-app.get('/about',function(req,res){
-    res.send("hello about")
+router.get("/about", urlcheck, function (req, res) {
+  res.send("hello about");
 });
-app.get('/login',function(req,res){
-    res.send("hello login")
+app.get("/login", function (req, res) {
+  res.send("hello login");
 });
-app.listen(4000)
+app.use("/", router);
+app.listen(4000);
